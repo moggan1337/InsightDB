@@ -1,5 +1,7 @@
 # InsightDB - Advanced Database Query Optimizer
 
+[![CI](https://github.com/moggan1337/InsightDB/actions/workflows/ci.yml/badge.svg)](https://github.com/moggan1337/InsightDB/actions/workflows/ci.yml)
+
 <p align="center">
   <img src="https://img.shields.io/badge/PostgreSQL-MySQL-SQLite-blue" alt="Supported Databases">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
@@ -8,6 +10,24 @@
 </p>
 
 InsightDB is a comprehensive database query optimizer that analyzes SQL queries, suggests indexes, rewrites queries for better performance, predicts execution times, and visualizes execution plans. It supports PostgreSQL, MySQL, and SQLite databases.
+
+## 🎬 Demo
+![InsightDB Demo](demo.gif)
+
+*Database query optimization with visual explain*
+
+## Screenshots
+| Component | Preview |
+|-----------|---------|
+| Query Analyzer | ![analyzer](screenshots/query-analyzer.png) |
+| Index Advisor | ![advisor](screenshots/index-advisor.png) |
+| Plan Visualizer | ![plan](screenshots/plan-viz.png) |
+
+## Visual Description
+Query analyzer shows query being parsed with optimization hints. Index advisor suggests missing indexes with query improvement estimates. Plan visualizer renders execution tree with costs.
+
+---
+
 
 ## Table of Contents
 
