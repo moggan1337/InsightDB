@@ -75,8 +75,8 @@ export class ExplainAnalyzer {
       nodeType: this.mapPostgresNodeType(node.Node_Type || node.Operation),
       outputColumns: [],
       costEstimate: {
-        startupCost: parseFloat(node.Startup_Cost || node.Startup cost || '0'),
-        totalCost: parseFloat(node.Total_Cost || node.Total_Cost || '0')
+        startupCost: parseFloat(node.Startup_Cost || node['Startup cost'] || '0'),
+        totalCost: parseFloat(node.Total_Cost || node['Total Cost'] || '0')
       }
     };
 

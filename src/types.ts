@@ -285,7 +285,6 @@ export interface QueryPlanNode {
   filter?: string;
   indexCond?: string;
   recheckCond?: string;
-  relationName?: string;
 }
 
 // Cost Estimate

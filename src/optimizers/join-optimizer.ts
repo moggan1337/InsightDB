@@ -249,6 +249,7 @@ export class JoinOptimizer {
     }
 
     const fullKey = tables.map(t => t.name).sort().join(',');
+    const bestOrder: string[] = [];
     
     return {
       tables: bestOrder.length > 0 ? bestOrder : tables,

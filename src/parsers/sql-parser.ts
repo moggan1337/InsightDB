@@ -956,6 +956,20 @@ export class SqlParser {
     return this.currentToken.type === TokenType.EOF;
   }
 
+  private getAggregationType(funcName: string): AggregationType | undefined {
+    const mapping: Record<string, AggregationType> = {
+      'COUNT': AggregationType.COUNT,
+      'SUM': AggregationType.SUM,
+      'AVG': AggregationType.AVG,
+      'MIN': AggregationType.MIN,
+      'MAX': AggregationType.MAX,
+      'COUNT_BIG': AggregationType.COUNT,
+      'STRING_AGG': AggregationType.STRING_AGG,
+      'ARRAY_AGG': AggregationType.ARRAY_AGG,
+    };
+    return mapping[funcName.toUpperCase()];
+  }
+
   private getRawSql(): string {
     return this.sql || '';
   }

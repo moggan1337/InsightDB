@@ -145,7 +145,7 @@ export class PlanVisualizer {
       nodes.push({
         id,
         label,
-        type: node.nodeType,
+        type: node.nodeType as PlanNodeType,
         cost: node.costEstimate.totalCost,
         rowCount: node.actualRows || 0,
         details: {

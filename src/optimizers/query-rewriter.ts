@@ -275,7 +275,6 @@ export class QueryRewriter {
     const tautologyPatterns = [
       /WHERE\s+1\s*=\s*1/i,
       /WHERE\s+true/i,
-      /WHERE\s+\w+\s*=\s*\w+\s+AND\s+\w+\s*=\s*\1/i
     ];
 
     for (const pattern of tautologyPatterns) {
@@ -295,7 +294,6 @@ export class QueryRewriter {
 
     // Check for contradictions
     const contradictionPatterns = [
-      /WHERE\s+\w+\s*=\s*\w+\s+AND\s+\w+\s*!=\s*\1/i,
       /WHERE\s+\w+\s*>\s*\d+\s+AND\s+\w+\s*<\s*\d+/i
     ];
 
